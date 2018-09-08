@@ -1,0 +1,14 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(3 ,1fr));
+    
+    &__search {
+        background-color: red;
+        grid-column: 2 / 4;
+    }
+
+    &__title {
+        background-color: green;
+        // grid-column: 1 / 2;
+    }
+}
