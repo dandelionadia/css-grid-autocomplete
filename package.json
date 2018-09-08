@@ -4,6 +4,9 @@
   "description": "Minimal Gulp starter kit",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "gulp"
+  },
   "devDependencies": {
     "browser-sync": "^2.23.2",
     "del": "^3.0.0",
