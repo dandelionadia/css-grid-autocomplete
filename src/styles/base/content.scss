@@ -26,10 +26,13 @@
 
     &__box {
         overflow: hidden;
-        transition: transform 0.8s;
+        
+        @media (min-width: 500px) {
+            transition: transform 0.7s;
 
-        &:hover {
-             transform: scale(1.25);
+            &:hover {
+                 transform: scale(1.25);
+            }
         }
 
         .picture {
