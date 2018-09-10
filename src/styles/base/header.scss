@@ -58,3 +58,16 @@
     }
 
 }
+
+
+.window {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: absolute;
+    display: none;
+}
+
+.window-show {
+    display: block;
+}

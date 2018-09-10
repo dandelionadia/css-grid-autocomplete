@@ -14,15 +14,27 @@ function checkNotEmpty(i) {
 }
 
 search.addEventListener('input', function (evt) { 
-  console.log(checkNotEmpty(this.value));
+  if(checkNotEmpty(this.value)) {
+    showBox();
+  } else {
+    hideBox();
+  }
 });
 
 function getHints(value, allHints) {
   var res = [];
 
   res = cities.filter(city => city[0].toLowerCase() === value.toLowerCase());
-
+  
   return res;
 }
 
-console.log(getHints('p', cities));
+function showBox() {
+  var newDiv = document.getElementsByClassName('window')[0];
+  newDiv.classList.add("window-show");
+}
+
+function hideBox() {
+  var newDiv = document.getElementsByClassName('window')[0];
+  newDiv.classList.remove("window-show");
+}
