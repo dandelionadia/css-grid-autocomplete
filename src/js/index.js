@@ -17,11 +17,13 @@ search.addEventListener('input', function (evt) {
   if(checkNotEmpty(this.value)) {
     showBox();
     var hints = getHints(this.value, cities);
+    addElement(hints);
     console.log(hints);
   } else {
     hideBox();
   }
 });
+
 /**
  * takes the hints
  * @param {*} value  value input's
@@ -36,11 +38,22 @@ function getHints(value, allHints) {
 }
 
 function showBox() {
-  var newDiv = document.getElementsByClassName('window')[0];
-  newDiv.classList.add("window-show");
+  var windowElement = document.getElementsByClassName('window')[0];
+  windowElement.classList.add("window-show");
 }
 
 function hideBox() {
-  var newDiv = document.getElementsByClassName('window')[0];
-  newDiv.classList.remove("window-show");
+  var windowElement = document.getElementsByClassName('window')[0];
+  windowElement.classList.remove("window-show");
+}
+
+function addElement(i) {
+  var windowElement = document.getElementsByClassName('window')[0];
+  i.map(hint => {
+    var newDiv = document.createElement("div");
+    newDiv.innerText= hint;
+
+    windowElement.appendChild(newDiv);
+  })
+  
 }
