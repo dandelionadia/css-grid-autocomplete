@@ -16,15 +16,21 @@ function checkNotEmpty(i) {
 search.addEventListener('input', function (evt) { 
   if(checkNotEmpty(this.value)) {
     showBox();
+    var hints = getHints(this.value, cities);
+    console.log(hints);
   } else {
     hideBox();
   }
 });
-
+/**
+ * takes the hints
+ * @param {*} value  value input's
+ * @param {*} allHints all hints in the array
+ */
 function getHints(value, allHints) {
   var res = [];
 
-  res = cities.filter(city => city[0].toLowerCase() === value.toLowerCase());
+  res = allHints.filter(city => city.toLowerCase().indexOf(value.toLowerCase()) === 0);
   
   return res;
 }
