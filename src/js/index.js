@@ -68,6 +68,7 @@ function addElement(i) {
     // listen click on the city hint
     newDiv.addEventListener('click', function () {
       giveSearchValue(hint);
+      hideBox();
     })
     newDiv.innerText= hint;
     // adds new div to the windiw
