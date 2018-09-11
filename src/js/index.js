@@ -50,8 +50,12 @@ function hideBox() {
 
 function addElement(i) {
   var windowElement = document.getElementsByClassName('window')[0];
-  i.map(hint => {
+  i.map((hint) => {
     var newDiv = document.createElement("div");
+    newDiv.addEventListener('click', function (evt) {
+      console.log('click');
+      clickOnTheValueFilsInput(hint);
+    })
     newDiv.innerText= hint;
     windowElement.appendChild(newDiv);
   })
@@ -61,4 +65,8 @@ function addElement(i) {
 function removeElement() {
   var windowElement = document.getElementsByClassName('window')[0];
   windowElement.innerHTML = '';
+}
+
+function clickOnTheValueFilsInput(i) {
+  document.getElementById('search').value=i;
 }
