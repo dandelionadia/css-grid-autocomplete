@@ -5,7 +5,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
+
   },
   "devDependencies": {
     "browser-sync": "^2.23.2",
