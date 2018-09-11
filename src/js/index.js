@@ -15,6 +15,7 @@ function checkNotEmpty(i) {
 
 search.addEventListener('input', function (evt) { 
   if(checkNotEmpty(this.value)) {
+    removeElement();
     showBox();
     var hints = getHints(this.value, cities);
     addElement(hints);
@@ -52,8 +53,12 @@ function addElement(i) {
   i.map(hint => {
     var newDiv = document.createElement("div");
     newDiv.innerText= hint;
-
     windowElement.appendChild(newDiv);
   })
   
+}
+
+function removeElement() {
+  var windowElement = document.getElementsByClassName('window')[0];
+  windowElement.innerHTML = '';
 }
