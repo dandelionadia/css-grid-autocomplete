@@ -41,20 +41,11 @@
         }
     }
 
-    &__box--normal {
-        // background-color: red;
-        // border: 1px solid black;
-    }
-
     &__box--tall {
-        // background-color: blue;
-        // border: 1px solid black;
         grid-row-end: span 2;
     }
 
     &__box--wide {
-        // background-color: yellow;
-        // border: 1px solid black;
         grid-column-end: span 2;
 
         @media (max-width: 500px) {

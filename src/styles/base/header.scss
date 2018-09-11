@@ -63,7 +63,8 @@
 .window {
     width: 200px;
     height: 200px;
-    background-color: pink;
+    background-color: white;
+    border: 1px solid $black-color;
     position: absolute;
     display: none;
 }
