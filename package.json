@@ -7,7 +7,6 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build"
-
   },
   "devDependencies": {
     "browser-sync": "^2.23.2",
